@@ -11,7 +11,7 @@ import Export from '../Exports/Export';
 
 
 const GPATable = () => {
-  const [results, setResults] = useState<any[]>(dummyResults)
+  const [results, setResults] = useState<GpaAttributes[]>([])
 
 
   const totalCredits = results.reduce((sum, row) => sum + row.credit, 0);
