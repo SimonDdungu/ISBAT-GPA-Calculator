@@ -5,7 +5,14 @@ import { autoTable } from 'jspdf-autotable'
 
 const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) => {
 
-     
+    let invalidResults = true;
+
+    if(results.length < 4){
+        invalidResults = true
+    }else{
+        invalidResults = false
+    }
+
 
     const cols =['Unit Name', 'IA Marks', 'UE Marks', 'Total Score', 'Grade', 'Points', 'Credit', 'Grade Points']
     const body = results.map((item: any) => [
@@ -135,11 +142,11 @@ const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) =>
 
   return (
     <div className="flex items-center md:justify-content-end gap-2 text-xs md:text-sm">
-            <button onClick={exportPdf} className='rounded-lg bg-red-800 text-white flex items-center px-2 md:px-5 py-2 font-semibold cursor-pointer hover:bg-red-900 transition-colors'>
+            <button disabled={invalidResults} onClick={exportPdf} className='disabled:cursor-not-allowed  rounded-lg bg-red-800 text-white flex items-center px-2 md:px-5 py-2 font-semibold cursor-pointer hover:bg-red-900 transition-colors'>
                 <span>Download as a PDF</span>
                 <i className='pi pi-file-pdf ml-2'></i>
             </button>
-            <button onClick={exportExcel} className='rounded-lg bg-green-700 text-white flex items-center px-2 md:px-5 py-2 font-semibold cursor-pointer hover:bg-green-800 transition-colors'>
+            <button disabled={invalidResults} onClick={exportExcel} className='disabled:cursor-not-allowed rounded-lg bg-green-700 text-white flex items-center px-2 md:px-5 py-2 font-semibold cursor-pointer hover:bg-green-800 transition-colors'>
                 <span>Download as Excel</span>
                 <i className='pi pi-file-excel ml-2'></i>
             </button>
