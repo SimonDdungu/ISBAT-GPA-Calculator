@@ -31,6 +31,18 @@ export interface EditGPA {
     rowData: any
 }
 
+export interface resetGPA {
+    setResults: (results: any) => void
+}
+
+
+export interface exportResults {
+    results: any;
+    gpa: number;
+    totalCredit: number;
+    totalGradePoints: number;
+}
+
 
 
 

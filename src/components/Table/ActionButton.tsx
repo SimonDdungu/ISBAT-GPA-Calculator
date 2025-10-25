@@ -1,6 +1,5 @@
 "use client"
 import React, { useRef, useState } from 'react'
-import { Button } from 'primereact/button';
 import { OverlayPanel } from 'primereact/overlaypanel';
 import { EditGPA, GpaAttributes, GpaAttributesForm } from '@/interfaces';
 import { Dialog } from 'primereact/dialog';
@@ -8,6 +7,7 @@ import { Formik, Form } from 'formik';
 import InputField from '../forms/InputField';
 import InputNumericField from '../forms/InputNumericField';
 import { AddResultsValidation } from '../Validations/AddResultsValidation';
+import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
 
 
 const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {
@@ -15,9 +15,20 @@ const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {
      const [showDialog, setShowDialog] = useState(false);
 
     const deleteResult = () => {
-        console.log("Deleting...")
         setResults((prev: GpaAttributes[]) => prev.filter((_, i) => i !== rowIndex));
-        op.current?.hide();
+    };
+
+    const deleteDialog = () => {
+            op.current?.hide();
+            confirmDialog({
+                message: 'Are you sure you want to delete this result?',
+                header: 'Delete Results',
+                icon: 'pi pi-trash',
+                acceptClassName: 'p-button-danger',
+                rejectClassName: 'text-gray-700 bg-white border-none',
+                accept: deleteResult,
+            });
+            
     };
 
     const EditData = () => {
@@ -105,12 +116,15 @@ const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {
                     <i className='pi pi-pencil mr-2 md:text-sm text-xs'></i>
                     <span>Edit</span>
                 </li>
-                <li className='bg-red-500 px-5 py-2 rounded-lg flex flex-row items-center cursor-pointer' onClick={deleteResult}>
+                <li className='bg-red-500 px-5 py-2 rounded-lg flex flex-row items-center cursor-pointer' onClick={deleteDialog}>
                     <i className='pi pi-trash mr-2 md:text-sm text-xs'></i>
                     <span>Delete</span>
                 </li>
             </ul>
          </OverlayPanel>
+
+
+         
 
 
          <Dialog

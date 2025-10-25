@@ -85,7 +85,7 @@ const AddResults = ({setResults, results}: AddGPA) => {
   return (
     <div>
 
-        <button onClick={() => setShowDialog(true)} className="text-xs md:text-sm flex items-center gap-x-2 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition md:ml-auto mb-5 w-max cursor-pointer">
+        <button onClick={() => setShowDialog(true)} className="text-xs md:text-sm flex items-center gap-x-2 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition w-max cursor-pointer">
             <i className="pi pi-plus  md:text-sm text-xs"></i>
             <span>Add Results</span>
         </button>
