@@ -98,7 +98,7 @@ const AddResults = ({setResults, results}: AddGPA) => {
             modal
             onHide={() => setShowDialog(false)}
         >
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 pt-4">
             <Formik initialValues={newResults} validationSchema={AddResultsValidation} onSubmit={handleSubmit}>
                 {({  }) => (
                     <Form className="space-y-2">

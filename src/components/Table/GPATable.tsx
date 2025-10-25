@@ -41,7 +41,7 @@ const GPATable = () => {
       </div>
          
       
-      <div className="card">
+      <div className="card origin-top-left  scale-[0.8] sm:scale-100 w-[125%] sm:w-full">
             <DataTable value={results} size='small' className='text-sm' removableSort stripedRows scrollable scrollHeight="400px" showGridlines  tableStyle={{ minWidth: '50rem' }} emptyMessage="No semeter results added yet.">
                 <Column field="unitName" sortable header="Unit Name" style={{ width: '10%' }}></Column>
                 <Column field="iaMarks" sortable header="IA Marks" style={{ width: '5%' }}></Column>
