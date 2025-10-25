@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "ISBAT GPA Calculator",
     images: [
       {
-        url: "https://isbat-gpa-calculator.vercel.app/isbat-gpa-openimage.png",
+        url: "https://isbat-gpa-calculator.vercel.app/isbatgpaopenimage.png",
         width: 1200,
         height: 630,
         alt: "ISBAT GPA Calculator"
