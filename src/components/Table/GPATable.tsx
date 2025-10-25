@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { GpaAttributes, initialResults } from '@/interfaces';
+import { GpaAttributes } from '@/interfaces';
 import AddResults from './AddResults';
 import ActionButton from './ActionButton';
 import { dummyResults } from '@/interfaces';

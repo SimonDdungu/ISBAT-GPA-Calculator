@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ISBAT GPA Calculator",
     description: "A simple ISBAT GPA calculator designed for ISBAT university students to compute semester and cumulative GPA easily.",
-    url: "https://isbat-gpa-calculator.vercel.app",
+    url: "https://isbat-gpa-calculator.vercel.app/",
     type: "website",
     siteName: "ISBAT GPA Calculator",
     images: [
       {
-        url: "https://isbat-gpa-calculator.vercel.app/isbat_gpa_openimage.png",
+        url: "https://isbat-gpa-calculator.vercel.app/isbat-gpa-openimage.png",
         width: 1200,
         height: 630,
         alt: "ISBAT GPA Calculator"
