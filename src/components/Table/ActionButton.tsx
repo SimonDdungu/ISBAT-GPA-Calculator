@@ -127,36 +127,36 @@ const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {
          
 
 
-         <Dialog
-                     header="Edit Course Unit Results"
-                     visible={showDialog}
-                     className='w-[90vw] md:w-120'
-                     modal
-                     onHide={() => setShowDialog(false)}
-                 >
-                 <div className="flex flex-col gap-3 pt-4">
-                     <Formik initialValues={rowData} validationSchema={AddResultsValidation} onSubmit={handleSubmit}>
-                         {({  }) => (
-                             <Form className="space-y-2">
-                                 <InputField name="unitName" label="Unit Name" placeholder="Enter Course Unit Name"/>
-                                 <InputNumericField name="credit" label="Credit" placeholder="Enter Credit for Course Unit" type="text" inputMode="numeric"  maxLength={1} />
-                                 <InputNumericField name="iaMarks" label="IA Marks" placeholder="Enter IA Marks Scored" type="text" inputMode="numeric" maxLength={2} />
-                                 <InputNumericField name="ueMarks" label="UE Marks" placeholder="Enter UE Marks Scored" type="text" inputMode="numeric"  maxLength={2} />
-                                 <div className="flex justify-end mt-3 text-sm gap-x-3">
-                                     <div onClick={() => setShowDialog(false)} className="text-blue-600 px-5 py-2  cursor-pointer">
-                                         Cancel
-                                     </div>
-                                     <button type='submit' className="flex items-center gap-x-2 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition cursor-pointer">
-                                         <i className='pi pi-check'></i>
-                                         <span>Update Results</span>
-                                     </button>
-                                 </div>
-                             </Form>
-                         )}
-                     </Formik>
-         
-                 </div>
-               </Dialog>
+        <Dialog
+            header="Edit Course Unit Results"
+            visible={showDialog}
+            className='w-[90vw] md:w-120'
+            modal
+            onHide={() => setShowDialog(false)}
+        >
+            <div className="flex flex-col gap-3 pt-4">
+                <Formik initialValues={rowData} validationSchema={AddResultsValidation} onSubmit={handleSubmit}>
+                    {({  }) => (
+                        <Form className="space-y-2">
+                            <InputField name="unitName" label="Unit Name" placeholder="Enter Course Unit Name"/>
+                            <InputNumericField name="credit" label="Credit" placeholder="Enter Credit for Course Unit" type="text" inputMode="numeric"  maxLength={1} />
+                            <InputNumericField name="iaMarks" label="IA Marks" placeholder="Enter IA Marks Scored" type="text" inputMode="numeric" maxLength={2} />
+                            <InputNumericField name="ueMarks" label="UE Marks" placeholder="Enter UE Marks Scored" type="text" inputMode="numeric"  maxLength={2} />
+                            <div className="flex justify-end mt-3 text-sm gap-x-3">
+                                <div onClick={() => setShowDialog(false)} className="text-blue-600 px-5 py-2  cursor-pointer">
+                                    Cancel
+                                </div>
+                                <button type='submit' className="flex items-center gap-x-2 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition cursor-pointer">
+                                    <i className='pi pi-check'></i>
+                                    <span>Update Results</span>
+                                </button>
+                            </div>
+                        </Form>
+                    )}
+                </Formik>
+    
+            </div>
+        </Dialog>
     </div>
   )
 }
