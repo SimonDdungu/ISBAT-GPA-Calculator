@@ -21,7 +21,7 @@ export default function InputField({ name, label, placeholder, ...props }: Formi
         id={name}
         placeholder={placeholder}
         spellCheck={false}
-        className={`text-sm px-2 py-2 outline-none rounded-lg mt-2 border-2 border-gray-400 focus:border-blue-500 ${meta.touched && meta.error ? "border-red-600" : ""}`}
+        className={`text-base lg:text-sm px-2 py-2 outline-none rounded-lg mt-2 border-2 border-gray-400 focus:border-blue-500 ${meta.touched && meta.error ? "border-red-600" : ""}`}
         {...props}
         {...field}
       />

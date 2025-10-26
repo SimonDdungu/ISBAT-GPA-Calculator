@@ -24,7 +24,7 @@ export default function InputNumericField({ name, label, placeholder, ...props }
         placeholder={placeholder}
         spellCheck={false}
         onChange={(e) => helpers.setValue(e.target.value.replace(/\D/g, ""))}
-        className={`text-sm px-2 py-2 outline-none rounded-lg mt-2 border-2 border-gray-400 focus:border-blue-500 ${meta.touched && meta.error ? "border-red-600" : ""}`}
+        className={`text-base lg:text-sm px-2 py-2 outline-none rounded-lg mt-2 border-2 border-gray-400 focus:border-blue-500 ${meta.touched && meta.error ? "border-red-600" : ""}`}
       />
 
       {meta.touched && meta.error && <p className="text-red-500 absolute bottom-0 left-1 text-xs tracking-wide">{meta.error}</p>}
