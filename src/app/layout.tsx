@@ -45,6 +45,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="apple-mobile-web-app-title" content="ISBAT GPA" />
+        <meta name="google-site-verification" content="2JZ_suHfvCn3qiWD40bbaILURN0_jtPpocEGlGwdOYs" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
