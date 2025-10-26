@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { Formik, Form } from 'formik';
 import InputField from '../forms/InputField';
-import { Button } from 'primereact/button';
-import { classNames } from 'primereact/utils';
 import { AddGPA, GpaAttributes, GpaAttributesForm } from '@/interfaces';
 import { initialResults } from '@/interfaces';
 import { AddResultsValidation } from '../Validations/AddResultsValidation';

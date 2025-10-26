@@ -7,7 +7,7 @@ import { Formik, Form } from 'formik';
 import InputField from '../forms/InputField';
 import InputNumericField from '../forms/InputNumericField';
 import { AddResultsValidation } from '../Validations/AddResultsValidation';
-import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
+import { confirmDialog } from 'primereact/confirmdialog';
 
 
 const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {

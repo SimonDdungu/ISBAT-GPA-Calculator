@@ -1,12 +1,7 @@
 "use client"
-import React, { useState } from 'react';
-import { Dialog } from 'primereact/dialog';
-import { Formik, Form } from 'formik';
-import InputField from '../forms/InputField';
-import { Button } from 'primereact/button';
-import { classNames } from 'primereact/utils';
+import React from 'react';
 import { resetGPA} from '@/interfaces';
-import { ConfirmDialog, confirmDialog } from 'primereact/confirmdialog';
+import { confirmDialog } from 'primereact/confirmdialog';
 
 
 const ResetResults = ({setResults}: resetGPA) => {
