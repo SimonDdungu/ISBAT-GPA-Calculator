@@ -92,7 +92,7 @@ const AddResults = ({setResults, results}: AddGPA) => {
 
 
         <Dialog
-            header="Add Course Unit Result"
+            header="Add Course Unit Results"
             visible={showDialog}
             className='w-[90vw] md:w-120'
             modal

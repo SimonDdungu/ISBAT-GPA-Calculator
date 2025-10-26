@@ -128,7 +128,7 @@ const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {
 
 
          <Dialog
-                     header="Edit Course Unit Result"
+                     header="Edit Course Unit Results"
                      visible={showDialog}
                      className='w-[90vw] md:w-120'
                      modal
