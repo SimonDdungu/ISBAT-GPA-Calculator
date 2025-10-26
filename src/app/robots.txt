@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap:  https://isbat-gpa-calculator.vercel.app/sitemap.xml

@@ -12,7 +12,7 @@ const Footer = () => {
             <h3><span className='text-red-500'>Disclaimer:</span> This is not an official ISBAT University GPA Calculator.<br/>This is a side project to help fellow ISBAT students calculate there GPA.</h3>
         </div>
 
-        <Link href={"mailto:dev.simonddungu@gmail.com"} className='text-white flex flex-row gap-x-2 items-center text-sm'>
+        <Link target='_blank' href={"mailto:dev.simonddungu@gmail.com"} rel="noopener noreferrer" className='text-white flex flex-row gap-x-2 items-center text-sm'>
           <Image src={Email} alt='email' className='size-6 object-contain'/>
           <span>dev.simonddungu@gmail.com</span>
         </Link>
