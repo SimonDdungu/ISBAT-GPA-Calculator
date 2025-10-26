@@ -142,9 +142,9 @@ const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) =>
 
 
     worksheet.addRow([]); // blank row
-    const gpaRow = worksheet.addRow(['GPA', gpa])
+    const gpaRow = worksheet.addRow(['GPA', gpa.toFixed(2)])
     const totalCreditRow = worksheet.addRow(['Total Credit', totalCredit])
-    const totalGradePointsRow = worksheet.addRow(['Total Grade Points', totalGradePoints])
+    const totalGradePointsRow = worksheet.addRow(['Total Grade Points', totalGradePoints.toFixed(2)])
 
     gpaRow.getCell(1).font = { bold: true };
 
