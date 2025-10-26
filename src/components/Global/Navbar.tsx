@@ -41,7 +41,7 @@ const Navbar = () => {
             </button>
 
             <div className='hidden lg:flex flex-row gap-x-10 text-sm'>
-                <Link target='_blank' href={'https://www.isbatuniversity.ac.ug/'} className='px-5 py-2 bg-red-900 text-white rounded-lg flex gap-x-3 items-center hover:bg-red-800 transition-colors'>
+                <Link target='_blank' href={'https://www.isbatuniversity.ac.ug/'} className='px-5 py-2 bg-red-800 text-white rounded-lg flex gap-x-3 items-center hover:bg-red-900 transition-colors'>
                     <i className='pi pi-globe'></i>
                     <span>ISBAT University</span>
                 </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
 
             {/* Mobile Nav */}
             <div ref={Mobile_Menu} className={`lg:hidden flex flex-col gap-y-5 h-60 shadow-sm text-sm absolute top-full left-0 right-0 bg-white/95 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} transition duration-150  p-5`}>
-                <Link target='_blank' href={'https://www.isbatuniversity.ac.ug/'} className='w-60 px-5 py-2 bg-red-900 text-white rounded-lg flex gap-x-3 items-center hover:bg-red-800 transition-colors'>
+                <Link target='_blank' href={'https://www.isbatuniversity.ac.ug/'} className='w-60 px-5 py-2 bg-red-800 text-white rounded-lg flex gap-x-3 items-center hover:bg-red-900 transition-colors'>
                     <i className='pi pi-globe'></i>
                     <span>ISBAT University</span>
                 </Link>
