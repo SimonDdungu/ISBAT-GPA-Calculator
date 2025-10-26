@@ -19,11 +19,11 @@ const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) =>
         item.unitName,
         item.iaMarks,
         item.ueMarks,
-        item.total,
+        item.totalScore,
         item.grade,
         item.points,
         item.credit,
-        item.gradePoints,
+        item.weightedGradePoints,
     ]);
 
     const dataForExcel = results.map((item: any) => ({
