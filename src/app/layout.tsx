@@ -47,7 +47,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="ISBAT GPA" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <PrimeReactProvider>
           <ConfirmDialog className='w-[90vw] md:w-120 text-sm'/>
