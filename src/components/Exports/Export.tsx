@@ -30,11 +30,11 @@ const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) =>
         'Unit Name': item.unitName,
         'IA Marks': item.iaMarks,
         'UE Marks': item.ueMarks,
-        'Total Score': item.total,
+        'Total Score': item.totalScore,
         'Grade': item.grade,
         'Points': item.points,
         'Credit': item.credit,
-        'Grade Points': item.gradePoints,
+        'Grade Points': item.weightedGradePoints,
     }));
 
     
