@@ -33,7 +33,7 @@ const Navbar = () => {
 
         
             <div className='w-50 pointer-events-none'>
-                <Image src={Logo} alt='ISBAT University Logo' className='w-full h-full object-contain'/>
+                <Image src={Logo} alt='ISBAT University Logo' loading='eager' className='w-full h-full object-contain'/>
             </div>
 
             <button className='text-red-800 lg:hidden'>

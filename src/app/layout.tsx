@@ -19,10 +19,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ISBAT GPA Calculator",
-  description: "A simple ISBAT GPA calculator designed for ISBAT university students to compute semester and cumulative GPA easily.",
+  description: "A simple lightweight ISBAT GPA calculator designed for ISBAT university students to compute semester and cumulative GPA easily.",
   openGraph: {
     title: "ISBAT GPA Calculator",
-    description: "A simple ISBAT GPA calculator designed for ISBAT university students to compute semester and cumulative GPA easily.",
+    description: "A simple lightweight ISBAT GPA calculator designed for ISBAT university students to compute semester and cumulative GPA easily.",
     url: "https://isbat-gpa-calculator.vercel.app/",
     type: "website",
     siteName: "ISBAT GPA Calculator",
