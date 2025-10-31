@@ -1,10 +1,10 @@
 "use client"
 import React from 'react';
-import { resetGPA} from '@/interfaces';
+import { OldresetGPA} from '@/interfaces';
 import { confirmDialog } from 'primereact/confirmdialog';
 
 
-const ResetResults = ({setResults}: resetGPA) => {
+const ResetResults = ({setResults}: OldresetGPA) => {
 
     const accept = () => {
         setResults([])

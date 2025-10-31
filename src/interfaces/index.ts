@@ -27,14 +27,22 @@ export interface AddGPA {
 
 export interface EditGPA {
     id: string; 
-    //setResults: (results: any) => void;
+    rowIndex: number;
+    rowData: any
+}
+
+export interface OldEditGPA {
+    setResults: (results: any) => void;
     rowIndex: number;
     rowData: any
 }
 
 export interface resetGPA {
     id: string;
-    //setResults: (results: any) => void
+}
+
+export interface OldresetGPA {
+    setResults: (results: any) => void
 }
 
 

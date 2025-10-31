@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef, useState } from 'react'
 import { OverlayPanel } from 'primereact/overlaypanel';
-import { EditGPA, GpaAttributes, GpaAttributesForm } from '@/interfaces';
+import { OldEditGPA, GpaAttributes, GpaAttributesForm } from '@/interfaces';
 import { Dialog } from 'primereact/dialog';
 import { Formik, Form } from 'formik';
 import InputField from '../forms/InputField';
@@ -10,7 +10,7 @@ import { AddResultsValidation } from '../Validations/AddResultsValidation';
 import { confirmDialog } from 'primereact/confirmdialog';
 
 
-const ActionButton = ({setResults, rowIndex, rowData}: EditGPA) => {
+const ActionButton = ({setResults, rowIndex, rowData}: OldEditGPA) => {
     const op =  useRef<OverlayPanel>(null);
      const [showDialog, setShowDialog] = useState(false);
 
