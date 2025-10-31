@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { PrimeReactProvider } from 'primereact/api';
 import "./globals.css";
 import { Footer, Navbar } from "@/components/Global";
+import { Provider } from "react-redux";
 import { ConfirmDialog } from "primereact/confirmdialog";
+import { ReduxProvider } from "@/redux/Provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,12 +52,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
+        <ReduxProvider>
         <PrimeReactProvider>
           <ConfirmDialog className='w-[90vw] md:w-120 text-sm'/>
           <Navbar />
           {children}
           <Footer />
         </PrimeReactProvider>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -26,13 +26,15 @@ export interface AddGPA {
 }
 
 export interface EditGPA {
-    setResults: (results: any) => void;
+    id: string; 
+    //setResults: (results: any) => void;
     rowIndex: number;
     rowData: any
 }
 
 export interface resetGPA {
-    setResults: (results: any) => void
+    id: string;
+    //setResults: (results: any) => void
 }
 
 
@@ -57,6 +59,23 @@ export const initialResults = {
     points: 0,
     weightedGradePoints: 0,
 }
+
+
+export interface SemesterAttributes {
+  id: string;
+  name: string;
+  results: any[];
+  gpa: number | null;
+}
+
+export interface SemesterTableData{
+  id: string;
+  results: GpaAttributes[];
+}
+
+
+
+
 
 export const dummyResults = [
   {
@@ -96,3 +115,13 @@ export const dummyResults = [
     weightedGradePoints: 7.5, // 2.5 * 3 credits
   },
 ];
+
+
+export const initialSemesters: SemesterAttributes[] = [
+  {id: "sem 1", name: "Semester 1", results: [], gpa: null},
+  {id: "sem 2", name: "Semester 2", results: [], gpa: null},
+  {id: "sem 3", name: "Semester 3", results: [], gpa: null},
+  {id: "sem 4", name: "Semester 4", results: [], gpa: null},
+  {id: "sem 5", name: "Semester 5", results: [], gpa: null},
+  {id: "sem 6", name: "Semester 6", results: [], gpa: null},
+]
