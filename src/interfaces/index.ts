@@ -47,6 +47,7 @@ export interface OldresetGPA {
 
 
 export interface exportResults {
+    semester: string;
     results: any;
     gpa: number;
     totalCredit: number;
@@ -78,6 +79,7 @@ export interface SemesterAttributes {
 
 export interface SemesterTableData{
   id: string;
+  semesterName: string;
   results: GpaAttributes[];
 }
 

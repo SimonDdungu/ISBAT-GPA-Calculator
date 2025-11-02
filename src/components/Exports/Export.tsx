@@ -4,7 +4,7 @@ import jsPDF from 'jspdf';
 import { autoTable } from 'jspdf-autotable'
 import ExcelJS from 'exceljs';
 
-const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) => {
+const Export = ({semester ,results, gpa, totalCredit, totalGradePoints}: exportResults) => {
 
     let invalidResults = true;
 
@@ -35,7 +35,7 @@ const Export = ({results, gpa, totalCredit, totalGradePoints}: exportResults) =>
 
         doc.setFontSize(16);
         doc.setFont('helvetica', 'bold');
-        doc.text('ISBAT University GPA Results', 40, 40); 
+        doc.text(`ISBAT University ${semester} GPA Results`, 40, 40); 
 
         autoTable(doc, {
             head: [cols],

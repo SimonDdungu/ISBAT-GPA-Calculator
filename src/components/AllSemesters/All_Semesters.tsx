@@ -33,6 +33,7 @@ const All_Semesters = () => {
                     return (
                    <TabPanel header={sem.name} key={index} className='text-sm'>
                     <SemesterTable
+                        semesterName={sem.name}
                         id={sem.id}
                         results={sem.results}
                     />

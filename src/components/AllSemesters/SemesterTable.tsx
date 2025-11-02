@@ -13,7 +13,7 @@ import { updateSemesterResults, setSemesterGPA } from "@/redux/slice";
 import { RootState } from '@/redux/store';
 
 
-const SemesterTable = ({id, results}: SemesterTableData) => {
+const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
   const dispatch = useDispatch();
 
   const totalCredits = results.reduce((sum, row) => sum + row.credit, 0);
@@ -43,7 +43,7 @@ const SemesterTable = ({id, results}: SemesterTableData) => {
         </div>
 
         <div>
-          <Export results={results} gpa={GPA} totalCredit={totalCredits} totalGradePoints={totalGradePoints}/>
+          <Export semester={semesterName} results={results} gpa={GPA} totalCredit={totalCredits} totalGradePoints={totalGradePoints}/>
         </div>
       </div>
          
