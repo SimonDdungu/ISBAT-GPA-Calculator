@@ -17,7 +17,7 @@ const GradingTable = () => {
   ];
 
   return (
-     <div className="overflow-x-auto text-sm">
+     <div className="overflow-x-auto text-sm my-4">
       <table className="min-w-full border border-gray-300 divide-y divide-gray-200">
         <thead className="bg-gray-100">
           <tr>
