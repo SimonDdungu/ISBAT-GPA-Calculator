@@ -35,7 +35,7 @@ const GPATable = () => {
         </div>
 
         <div>
-          <Export results={results} gpa={GPA} totalCredit={totalCredits} totalGradePoints={totalGradePoints}/>
+          {/* <Export results={results} gpa={GPA} totalCredit={totalCredits} totalGradePoints={totalGradePoints}/> */}
         </div>
       </div>
          

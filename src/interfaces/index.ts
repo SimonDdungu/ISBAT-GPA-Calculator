@@ -54,6 +54,10 @@ export interface exportResults {
     totalGradePoints: number;
 }
 
+export interface exportAllResults {
+    semesters: any;
+}
+
 
 
 

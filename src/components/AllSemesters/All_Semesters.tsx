@@ -9,6 +9,7 @@ import { Calculate_CGPA } from '@/redux/CGPA';
 import AddSemester from './AddSemester';
 import ResetSemesters from './ResetSemesters';
 import { removeSemester } from '@/redux/slice';
+import ExportAllSemesters from '../Exports/ExportAllSemesters';
 
 const All_Semesters = () => {
     const dispatch = useDispatch()
@@ -25,6 +26,7 @@ const All_Semesters = () => {
   return (
         <div className="lg:px-10">
             <div className='flex flex-row justify-end items-center gap-x-5'>
+                <ExportAllSemesters semesters={semesters}/>
                 <ResetSemesters />
             </div>
             <TabView scrollable 
