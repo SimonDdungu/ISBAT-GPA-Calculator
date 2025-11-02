@@ -25,7 +25,7 @@ const All_Semesters = () => {
 
   return (
         <div className="lg:px-10">
-            <div className='flex flex-row justify-end items-center gap-x-5'>
+            <div className='px-5 lg:px-0 flex flex-col md:flex-row md:justify-end md:items-center gap-x-5 gap-y-2 mb-5'>
                 <ExportAllSemesters semesters={semesters}/>
                 <ResetSemesters />
             </div>

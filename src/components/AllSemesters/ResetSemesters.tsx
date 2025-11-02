@@ -22,7 +22,7 @@ const ResetSemesters = () => {
     };
 
   return (
-    <button className='px-5 py-2 bg-white border-1 border-red-700 rounded-lg text-sm text-red-700 cursor-pointer font-semibold' onClick={reset}>
+    <button className='px-5 py-2 bg-white border border-red-700 rounded-lg text-xs md:text-sm  text-red-700 cursor-pointer md:font-semibold w-max' onClick={reset}>
         Reset Semesters
     </button>
   )

@@ -13,26 +13,11 @@ const ExportAllSemesters = ({semesters}: exportAllResults) => {
   const validSemesters = semesters.filter((sem: SemesterAttributes) => sem.gpa !== null);
    const CGPA = useSelector((state: RootState) => Calculate_CGPA(state));
 
-   const invalidResults = validSemesters.length < 1;
+   const invalidSemesters = validSemesters.length < 1;
 
 
     let yOffset =100;
     const cols =['Unit Name', 'IA Marks', 'UE Marks', 'Total Score', 'Grade', 'Points', 'Credit', 'Grade Points']
-    // const body = validSemesters.flatMap((semester: any) =>
-    //             semester.results.map((item: any) => [
-    //               item.unitName,
-    //               item.iaMarks,
-    //               item.ueMarks,
-    //               item.totalScore,
-    //               item.grade,
-    //               item.points,
-    //               item.credit,
-    //               item.weightedGradePoints,
-    //             ])
-    //           );
-
-
-
     
      
 
@@ -216,7 +201,7 @@ const ExportAllSemesters = ({semesters}: exportAllResults) => {
 
   return (
     <div className="flex items-center md:justify-content-end gap-2 text-xs md:text-sm">
-            <button disabled={invalidResults} onClick={exportPdf} className='disabled:cursor-not-allowed  rounded-lg bg-red-800 text-white flex items-center px-2 md:px-5 py-2 font-semibold cursor-pointer hover:bg-red-900 transition-colors'>
+            <button disabled={invalidSemesters} onClick={exportPdf} className='disabled:cursor-not-allowed  rounded-lg bg-red-800 text-white flex items-center px-2 md:px-5 py-2 font-semibold cursor-pointer hover:bg-red-900 transition-colors'>
                 <span>Download all Semester Results as a PDF</span>
                 <i className='pi pi-file-pdf ml-2'></i>
             </button>

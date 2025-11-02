@@ -15,6 +15,7 @@ import { RootState } from '@/redux/store';
 
 const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
 
   const totalCredits = results.reduce((sum, row) => sum + row.credit, 0);
   const totalGradePoints = results.reduce((sum, row) => sum + row.weightedGradePoints, 0);
@@ -49,7 +50,7 @@ const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
          
       
       <div className="card origin-top-left  scale-[0.8] sm:scale-100 w-[125%] sm:w-full">
-            <DataTable value={results} size='small' className='text-sm' removableSort stripedRows scrollable scrollHeight="400px" showGridlines  tableStyle={{ minWidth: '50rem' }} emptyMessage="No semeter results added yet.">
+            <DataTable value={results} size='small' className='text-sm' loading={loading} removableSort stripedRows scrollable scrollHeight="400px" showGridlines  tableStyle={{ minWidth: '50rem' }} emptyMessage="No semeter results added yet.">
                 <Column field="unitName" sortable header="Unit Name" style={{ width: '10%' }}></Column>
                 <Column field="iaMarks" sortable header="IA Marks" style={{ width: '5%' }}></Column>
                 <Column field="ueMarks" sortable header="UE Marks" style={{ width: '5%' }}></Column>
