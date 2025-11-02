@@ -3,24 +3,32 @@ import React, { useState } from 'react'
 import { TabView, TabPanel } from 'primereact/tabview';
 import SemesterTable from './SemesterTable';
 import { initialSemesters } from '@/interfaces';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from '@/redux/store';
 import { Calculate_CGPA } from '@/redux/CGPA';
+import AddSemester from './AddSemester';
+import ResetSemesters from './ResetSemesters';
+import { removeSemester } from '@/redux/slice';
 
 const All_Semesters = () => {
+    const dispatch = useDispatch()
     const semesters = useSelector((state: RootState) => state.semesters);
     const total_cgpa = useSelector((state: RootState) => Calculate_CGPA(state));
-    //const [semesters, setSemesters] = useState<any>(initialSemesters)
+    //const [activeIndex, setActiveIndex] = useState(0);
 
-    // const addCourse = (index: number, addedResults: any) => {
-    //     const updatedSemesters = [...semesters];
-    //     updatedSemesters[index].results.push(addedResults);
-    //     setSemesters(updatedSemesters);
-    // };
+
+    const handleCloseSemester = (index: number) => {
+        dispatch(removeSemester({index}))
+
+    }
 
   return (
         <div className="lg:px-10">
-            <TabView scrollable>
+            <div className='flex flex-row justify-end items-center gap-x-5'>
+                <ResetSemesters />
+            </div>
+            <TabView scrollable 
+            >
                {semesters.map((sem: any, index: any) => {
                     return (
                    <TabPanel header={sem.name} key={index} className='text-sm'>

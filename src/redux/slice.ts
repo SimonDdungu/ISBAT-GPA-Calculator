@@ -6,18 +6,33 @@ const semesterSlice = createSlice({
     name: "semesters",
     initialState: initialSemesters,
     reducers: {
-       addSemester: (state, action: PayloadAction<{ name: string }>) => {
+       addSemester: (state) => {
+        const index = state.length + 1
         const newSemester: SemesterAttributes = {
-          id: `sem ${state.length + 1}`,
-          name: action.payload.name,
+          id: `sem ${index}`,
+          name: `Semester ${index}`,
           results: [], 
           gpa: null, 
         };
         state.push(newSemester);
         },
 
-        removeSemester: (state, action: PayloadAction<{ id: string }>) => {
-          return state.filter(sem => sem.id !== action.payload.id);
+        removeSemester: (state, action: PayloadAction<{ index: number }>) => {
+          // Remove the semester at the specified index
+          state.splice(action.payload.index, 1);
+
+          // Renumber and Rename semesters after removing
+          state.forEach((sem, i) => {
+            sem.id = `sem ${i + 1}`;
+            sem.name = `Semester ${i + 1}`;
+          });
+        },
+
+        resetAllSemesters: (state) => {
+          state.forEach(sem => {
+            sem.results = [];
+            sem.gpa = null;
+          });
         },
 
         updateSemesterName: (state, action: PayloadAction<{ id: string; name: string }>) => {
@@ -69,5 +84,5 @@ const semesterSlice = createSlice({
 
 export const { addSemester, updateSemesterName, setSemesterGPA, removeSemester, 
   updateSemesterResults, addResults, updateResults, removeResults, 
-  resetSemesterResults } = semesterSlice.actions;
+  resetSemesterResults, resetAllSemesters } = semesterSlice.actions;
 export default semesterSlice.reducer;

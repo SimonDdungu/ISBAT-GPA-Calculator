@@ -19,6 +19,8 @@ const ResetResults = ({id}: resetGPA) => {
             message: 'Are you sure you want to reset your results?',
             header: 'Reset Results',
             icon: 'pi pi-replay',
+            acceptClassName: 'p-button-danger',
+            rejectClassName: 'text-gray-700 bg-white border-none',
             accept
         });
     };
