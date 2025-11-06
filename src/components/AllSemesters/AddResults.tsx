@@ -111,7 +111,7 @@ const AddResults = ({id}: AddSemResults) => {
                 {({  }) => (
                     <Form className="space-y-2">
                         <InputField name="unitName" label="Unit Name" placeholder="Enter Course Unit Name"/>
-                        <InputNumericField name="credit" label="Credit" placeholder="Enter Credit for Course Unit" type="text" inputMode="numeric"  maxLength={1} />
+                        <InputNumericField name="credit" label="Credit" placeholder="Enter Credit for Course Unit" type="text" inputMode="numeric"  maxLength={2} />
                         <InputNumericField name="iaMarks" label="IA Marks" placeholder="Enter IA Marks Scored" type="text" inputMode="numeric" maxLength={2} />
                         <InputNumericField name="ueMarks" label="UE Marks" placeholder="Enter UE Marks Scored" type="text" inputMode="numeric"  maxLength={2} />
                         <div className="flex justify-end mt-3 text-sm gap-x-3">

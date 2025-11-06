@@ -2,15 +2,13 @@
 import React, { useEffect, useState } from 'react'
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { GpaAttributes } from '@/interfaces';
 import AddResults from './AddResults';
 import ActionButton from './ActionButton';
 import ResetResults from './ResetResults'
 import Export from '../Exports/Export';
 import { SemesterTableData } from '@/interfaces';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateSemesterResults, setSemesterGPA } from "@/redux/slice";
-import { RootState } from '@/redux/store';
 
 
 const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
@@ -25,7 +23,6 @@ const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
   const validResults = results.length >= 4;
 
   useEffect(() => {
-
      if(results.length >= 4){
         dispatch(setSemesterGPA({ id: id, gpa: GPA }));
       }else{
