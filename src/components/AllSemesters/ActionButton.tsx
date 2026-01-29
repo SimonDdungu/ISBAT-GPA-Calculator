@@ -75,12 +75,6 @@ const ActionButton = ({id, rowIndex, rowData}: EditGPA) => {
             }else if (totalScore >= 50) {
                 grade = "D";
                 points = 2;
-            } else if (totalScore >= 45) {
-                grade = "E";
-                points = 1.5;
-            } else if (totalScore >= 40) {
-                grade = "E-";
-                points = 1;
             } else {
                 grade = "F";
                 points = 0;

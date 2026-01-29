@@ -11,9 +11,9 @@ const GradingTable = () => {
     { marks: '60 - 64', letter: 'C', gp: 3, interpretation: 'Fair' },
     { marks: '55 - 59', letter: 'D+', gp: 2.5, interpretation: 'Pass' },
     { marks: '50 - 54', letter: 'D', gp: 2, interpretation: 'Marginal Pass' },
-    { marks: '45 - 49', letter: 'E', gp: 1.5, interpretation: 'Marginal Fail' },
-    { marks: '40 - 44', letter: 'E-', gp: 1, interpretation: 'Clear Fail' },
-    { marks: 'Below 40', letter: 'F', gp: 0, interpretation: 'Bad Fail' },
+    // { marks: '45 - 49', letter: 'E', gp: 1.5, interpretation: 'Marginal Fail' },
+    // { marks: '40 - 44', letter: 'E-', gp: 1, interpretation: 'Clear Fail' },
+    { marks: 'Below 50', letter: 'F', gp: 0, interpretation: 'Fail' },
   ];
 
   return (

@@ -75,7 +75,7 @@ const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
 
         <div className='font-semibold text-sm mt-10 text-gray-700 flex flex-row gap-x-2 items-center'>
           <i className='pi pi-info-circle'></i>
-          <span>At least 4 Course Units are required to calculate GPA and download results.</span>
+          <span>At least 4 Course Units are required to calculate GPA, CGPA and download results.</span>
          </div>
 
         }
