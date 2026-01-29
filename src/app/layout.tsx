@@ -6,6 +6,7 @@ import { Footer, Navbar } from "@/components/Global";
 import { Provider } from "react-redux";
 import { ConfirmDialog } from "primereact/confirmdialog";
 import { ReduxProvider } from "@/redux/Provider";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -60,6 +61,7 @@ export default function RootLayout({
           <Footer />
         </PrimeReactProvider>
         </ReduxProvider>
+        <Analytics />
       </body>
     </html>
   );

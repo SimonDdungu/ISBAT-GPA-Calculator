@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.2",
+    "@vercel/analytics": "^1.6.1",
     "exceljs": "^4.4.0",
     "formik": "^2.4.6",
     "hamburger-react": "^2.5.2",
