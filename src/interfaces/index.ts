@@ -79,6 +79,8 @@ export interface SemesterAttributes {
   name: string;
   results: any[];
   gpa: number | null;
+  totalPoints: number | null;
+  totalCredits: number | null;
 }
 
 export interface SemesterTableData{
@@ -132,14 +134,14 @@ export const dummyResults = [
 
 
 export const initialSemesters: SemesterAttributes[] = [
-  {id: "sem 1", name: "Semester 1", results: [], gpa: null},
-  {id: "sem 2", name: "Semester 2", results: [], gpa: null},
-  {id: "sem 3", name: "Semester 3", results: [], gpa: null},
-  {id: "sem 4", name: "Semester 4", results: [], gpa: null},
-  {id: "sem 5", name: "Semester 5", results: [], gpa: null},
-  {id: "sem 6", name: "Semester 6", results: [], gpa: null},
-  {id: "sem 7", name: "Semester 7", results: [], gpa: null},
-  {id: "sem 8", name: "Semester 8", results: [], gpa: null},
-  {id: "sem 9", name: "Semester 9", results: [], gpa: null},
-  {id: "sem 10", name: "Semester 10", results: [], gpa: null},
+  {id: "sem 1", name: "Semester 1", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 2", name: "Semester 2", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 3", name: "Semester 3", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 4", name: "Semester 4", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 5", name: "Semester 5", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 6", name: "Semester 6", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 7", name: "Semester 7", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 8", name: "Semester 8", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 9", name: "Semester 9", results: [], gpa: null, totalPoints: null, totalCredits: null},
+  {id: "sem 10", name: "Semester 10", results: [], gpa: null, totalPoints: null, totalCredits: null},
 ]

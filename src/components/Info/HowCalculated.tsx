@@ -17,7 +17,8 @@ const HowCalculated = () => {
 
               <p>- Each Grade point is calculated from: <span className='font-semibold'>Grade Point = Credit x Points</span></p>
               <p>- The Final GPA (Grade Point Average) is calculated from: <span className='font-semibold'>GPA = Total Grade Points / Total Credit</span></p>
-              <p>- CGPA (Cumulative Grade Point Average) is calculated from: <span className='font-semibold'>CGPA = Total GPA across semesters / Number of Semesters</span></p>
+              <p className='text-red-800 border-b-2'>Update</p>
+              <p>- CGPA (Cumulative Grade Point Average) is calculated from: <span className='font-semibold'>CGPA = Total Grade Points per Semester / Total Credits per Semester</span></p>
             </div>
         </div>
     </div>

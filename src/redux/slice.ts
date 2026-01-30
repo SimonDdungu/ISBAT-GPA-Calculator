@@ -13,6 +13,8 @@ const semesterSlice = createSlice({
           name: `Semester ${index}`,
           results: [], 
           gpa: null, 
+          totalPoints: null,
+          totalCredits: null
         };
         state.push(newSemester);
         },
@@ -32,6 +34,8 @@ const semesterSlice = createSlice({
           state.forEach(sem => {
             sem.results = [];
             sem.gpa = null;
+            sem.totalPoints = null;
+            sem.totalCredits = null
           });
         },
 
@@ -40,9 +44,13 @@ const semesterSlice = createSlice({
           if (sem) sem.name = action.payload.name;
         },
 
-        setSemesterGPA: (state, action: PayloadAction<{ id: string; gpa: number | null }>) => {
+        setSemesterGPA: (state, action: PayloadAction<{ id: string; gpa: number | null, totalPoints: number | null, totalCredits: number | null }>) => {
           const sem = state.find(s => s.id === action.payload.id);
-          if (sem) sem.gpa = action.payload.gpa;
+          if (sem) {
+            sem.gpa = action.payload.gpa
+            sem.totalPoints = action.payload.totalPoints
+            sem.totalCredits = action.payload.totalCredits
+          };
         },
 
         addResults: (state, action: PayloadAction<{ id: string; results: GpaAttributes }>) => {
@@ -75,6 +83,8 @@ const semesterSlice = createSlice({
           if (sem) {
             sem.results = [];
             sem.gpa = null;  
+            sem.totalCredits = null;
+            sem.totalPoints = null;
           }
         },
     }

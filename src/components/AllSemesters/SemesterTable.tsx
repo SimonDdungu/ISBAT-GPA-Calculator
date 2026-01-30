@@ -24,9 +24,9 @@ const SemesterTable = ({semesterName ,id, results}: SemesterTableData) => {
 
   useEffect(() => {
      if(results.length >= 4){
-        dispatch(setSemesterGPA({ id: id, gpa: GPA }));
+        dispatch(setSemesterGPA({ id: id, gpa: GPA, totalPoints: totalGradePoints, totalCredits:  totalCredits}));
       }else{
-        dispatch(setSemesterGPA({ id: id, gpa: null }));
+        dispatch(setSemesterGPA({ id: id, gpa: null, totalPoints: null, totalCredits: null }));
       }
       
   }, [results.length, GPA, id, dispatch]);
