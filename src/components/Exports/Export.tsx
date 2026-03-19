@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { exportResults } from '@/interfaces';
 import jsPDF from 'jspdf';

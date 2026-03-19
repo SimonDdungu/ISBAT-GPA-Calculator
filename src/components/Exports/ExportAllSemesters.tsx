@@ -3,7 +3,6 @@ import React from 'react'
 import { exportAllResults, SemesterAttributes } from '@/interfaces';
 import jsPDF from 'jspdf';
 import { autoTable } from 'jspdf-autotable'
-import ExcelJS from 'exceljs';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { Calculate_CGPA } from '@/redux/CGPA';
