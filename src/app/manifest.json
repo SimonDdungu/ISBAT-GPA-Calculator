@@ -1,6 +1,9 @@
 {
   "name": "ISBAT GPA Calculator",
   "short_name": "ISBAT GPA",
+  "start_url": "/",
+  "description": "A simple lightweight ISBAT GPA calculator designed for ISBAT university students to compute semester and cumulative GPA easily.",
+  "id": "ISBAT_GPA_Calculator",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -9,10 +12,16 @@
       "purpose": "maskable"
     },
     {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     }
   ],
   "theme_color": "#ffffff",
